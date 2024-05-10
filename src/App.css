@@ -1,0 +1,51 @@
+:root {
+  --dark-blue-element: hsl(209, 23%, 22%);
+  --dark-blue-bg: hsl(207, 26%, 17%);
+  --dark-blue-text: hsl(200, 15%, 8%);
+  --dark-gray-input: hsl(0, 0%, 52%);
+  --light-gray-bg: hsl(0, 0%, 95%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+html[data-theme='light'] {
+  --bg-color: var(--light-gray-bg);
+  --text-color: var(--dark-blue-text);
+  --element-color: var(--white-color);
+  --input-color: var(--dark-gray-input);
+}
+
+html[data-theme='dark'] {
+  --bg-color: var(--dark-blue-bg);
+  --text-color: var(--white-color);
+  --element-color: var(--dark-blue-element);
+  --input-color: var(--white-color);
+}
+
+.nunito-300 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+}
+
+.nunito-600 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+}
+
+.nunito-800 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+}
+
+
+body {
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .page-btn {
+    @apply py-2 px-4 shadow-md;
+  }
+  .page-btn[data-dark-mode='true'] {
+    @apply shadow-black/20;
+  }
+  .page-btn[data-dark-mode='false'] {
+    @apply shadow-slate-300;
+  }
+  .page-btn[data-active='true'] {
+    @apply bg-elementColor;
+  }
+  .page-btn[data-active='false'] {
+    @apply bg-bgColor;
+  }
+}
+
+.current-page {
+  @apply bg-elementColor mx-1 pointer-events-none;
+}
+
+.current-page[data-dark-mode='true'] {
+  @apply shadow-black/20;
+}
+.current-page[data-dark-mode='false'] {
+  @apply shadow-slate-300;
+}
