@@ -9,7 +9,7 @@ import {
 
 const pageSize = 10;
 
-const MainContent = ({ darkMode, countriesData }) => {
+const MainContent = ({ countriesData }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [countries, setCountries] = useState(countriesData);
   const [currentPage, setCurrentPage] = useState(1);
@@ -37,7 +37,6 @@ const MainContent = ({ darkMode, countriesData }) => {
 
   const paginationProps = {
     currentPage,
-    darkMode,
     isPrevActive: currentPage > 1,
     isNextActive: currentPage < totalPages,
     onPrevPage: () => {

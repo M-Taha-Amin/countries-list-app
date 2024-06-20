@@ -1,4 +1,8 @@
-const Header = ({ darkMode, onChangeTheme }) => {
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+
+const Header = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <header className="bg-elementColor text-textColor shadow-md py-6 text-[15px] sm:text-lg md:text-xl">
       <div className="flex items-center justify-between px-4 xs:px-8 md:px-12 lg:px-16">
@@ -9,12 +13,12 @@ const Header = ({ darkMode, onChangeTheme }) => {
           <img
             className="w-5 cursor-pointer"
             src={`/images/${
-              darkMode ? 'moon-white' : 'moon-black-outline'
+              theme === 'dark' ? 'moon-white' : 'moon-black-outline'
             }.svg`}
             alt="dark mode icon"
-            onClick={onChangeTheme}
+            onClick={toggleTheme}
           />
-          {darkMode ? 'Light' : 'Dark'} Mode
+          {theme === 'dark' ? 'Light' : 'Dark'} Mode
         </div>
       </div>
     </header>
